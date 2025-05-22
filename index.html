@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Diógenes Luiz de Sá Guerra</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }.container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        max-width: 600px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .email {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #0066cc;
+    }
+
+    form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0066cc;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #004c99;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Diógenes Luiz de Sá Guerra</h1>
+        <p>
+            Sou apaixonado por tecnologia e sou formado em Eletrônica pelo CEFET-PR, Administração pela FESP-PR e Matemática pela UTFPR. <br>
+            Atualmente sou estudante de Análise e Desenvolvimento de Sistemas pela UNINTER. <br>
+            Já desenvolvi alguns programas em Python e estou montando meu portfólio.
+        </p>
+        <p class="email">Email: diogenesluizguerra@gmail.com</p><form id="contactForm">
+        <input type="text" id="name" placeholder="Seu nome" required>
+        <textarea id="message" rows="4" placeholder="Deixe seu recado para contato..." required></textarea>
+        <button type="submit">Enviar Recado</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+        alert(Obrigado pelo recado, ${name}!\nMensagem recebida: "${message}");
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
